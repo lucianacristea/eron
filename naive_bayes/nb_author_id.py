@@ -13,6 +13,7 @@ import sys
 from time import time
 sys.path.append("../tools/")
 from email_preprocess import preprocess
+from class_vis import prettyPicture, output_image
 
 
 ### features_train and features_test are the features for the training
@@ -30,6 +31,10 @@ print ("Time to train:", round(time()-t0, 3), "s")
 t0 = time()
 pred=clf.predict(features_test)
 print ("Time to make prediction:", round(time()-t0, 3), "s")
+
+### draw the decision boundary with the text points overlaid
+prettyPicture(clf, features_test, labels_test)
+output_image("test.png", "png", open("test.png", "rb").read())
 
 ### calculate and return the accuracy on the test data
 from sklearn.metrics import accuracy_score
