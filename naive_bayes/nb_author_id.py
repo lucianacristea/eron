@@ -26,8 +26,10 @@ from sklearn.naive_bayes import GaussianNB
 clf=GaussianNB()
 t0 = time()
 clf.fit(features_train, labels_train)
-print ("training time:", round(time()-t0, 3), "s")
+print ("Time to train:", round(time()-t0, 3), "s")
+t0 = time()
 pred=clf.predict(features_test)
+print ("Time to make prediction:", round(time()-t0, 3), "s")
 
 ### calculate and return the accuracy on the test data
 from sklearn.metrics import accuracy_score
