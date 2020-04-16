@@ -31,7 +31,7 @@ clf.fit(features_train, labels_train)
 pred=clf.predict(features_test)
 
 ### calculate and return the accuracy on the test data
-from classify import NBAccuracy
-accuracy = NBAccuracy(features_train, labels_train, features_test, labels_test)
+from sklearn.metrics import accuracy_score
+accuracy = accuracy_score(pred, labels_test)
 print("Accuracy of Naive Bayes predictor is: {}").format(accuracy)
 #########################################################
