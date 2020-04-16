@@ -27,7 +27,8 @@ def preprocess(words_file = "../tools/word_data.pkl", authors_file="../tools/ema
     authors = pickle.load(authors_file_handler)
     authors_file_handler.close()
 
-    words_file_handler = open(words_file, "r")
+    with open(words_file, 'rb') as file:
+        words_file_handler = pickle.load(file)
     word_data = pickle.load(words_file_handler)
     words_file_handler.close()
 
