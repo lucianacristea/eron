@@ -28,7 +28,6 @@ print ("Time to train:", round(time()-t0, 3), "s")
 
 t0 = time()
 pred=clf.predict(features_test)
-print("Shape feature test", features_test.shape)
 print ("Time to make prediction:", round(time()-t0, 3), "s")
 
 ### calculate and return the accuracy on the test data
