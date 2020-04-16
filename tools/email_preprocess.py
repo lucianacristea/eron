@@ -24,7 +24,7 @@ def preprocess(words_file = "../tools/word_data.pkl", authors_file="../tools/ema
     ### the words (features) and authors (labels), already largely preprocessed
     ### this preprocessing will be repeated in the text learning mini-project
     authors_file_handler = open(authors_file, "r")
-    authors = pickle.load(authors_file_handler)
+    authors = pickle.load(authors_file_handler.encode('utf-8'))
     authors_file_handler.close()
 
     words_file_handler = open(words_file, "r")
