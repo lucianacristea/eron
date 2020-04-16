@@ -20,11 +20,8 @@ from email_preprocess import preprocess
 ### labels_train and labels_test are the corresponding item labels
 features_train, features_test, labels_train, labels_test = preprocess()
 
-
-
-
-#########################################################
-### your code goes here ###
+##################################################################
+### create and predict according to Naive Bayes algorithm###
 from sklearn.naive_bayes import GaussianNB
 clf=GaussianNB()
 clf.fit(features_train, labels_train)
@@ -33,5 +30,5 @@ pred=clf.predict(features_test)
 ### calculate and return the accuracy on the test data
 from sklearn.metrics import accuracy_score
 accuracy = accuracy_score(pred, labels_test)
-print("Accuracy of Naive Bayes predictor is: {}").format(accuracy)
-#########################################################
+print("Accuracy of Naive Bayes predictor is: {}".format(accuracy))
+##################################################################
