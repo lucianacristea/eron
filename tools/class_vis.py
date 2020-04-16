@@ -16,9 +16,15 @@ import numpy as np
 #plt.ioff()
 
 def prettyPicture(clf, X_test, y_test):
-    x_min = 0.0; x_max = 1.0
-    y_min = 0.0; y_max = 1.0
-
+    #x_min = 0.0; x_max = 1.0
+    #y_min = 0.0; y_max = 1.0
+    print(X_text.shape)
+    X = X_test[:, :2]
+    print(X_text.shape)
+    x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
+    y_min, y_max = X[:, 1].min() - 1, X[:, 1].max() + 1
+    
+    
     # Plot the decision boundary. For that, we will assign a color to each
     # point in the mesh [x_min, m_max]x[y_min, y_max].
     h = .01  # step size in the mesh
@@ -26,6 +32,7 @@ def prettyPicture(clf, X_test, y_test):
     print (xx.ravel())
     print (yy.ravel())
     print (np.c_[xx.ravel(), yy.ravel()])
+    print(np.c_[xx.ravel(), yy.ravel()].shape)
     Z = clf.predict(np.c_[xx.ravel(), yy.ravel()])
 
     # Put the result into a color plot
