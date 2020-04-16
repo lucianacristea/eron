@@ -24,7 +24,9 @@ features_train, features_test, labels_train, labels_test = preprocess()
 ### create and predict according to Naive Bayes algorithm###
 from sklearn.naive_bayes import GaussianNB
 clf=GaussianNB()
+t0 = time()
 clf.fit(features_train, labels_train)
+print ("training time:", round(time()-t0, 3), "s")
 pred=clf.predict(features_test)
 
 ### calculate and return the accuracy on the test data
