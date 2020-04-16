@@ -18,9 +18,9 @@ import numpy as np
 def prettyPicture(clf, X_test, y_test):
     #x_min = 0.0; x_max = 1.0
     #y_min = 0.0; y_max = 1.0
-    print(X_text.shape)
+    
     X = X_test[:, :2]
-    print(X_text.shape)
+   
     x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
     y_min, y_max = X[:, 1].min() - 1, X[:, 1].max() + 1
     
