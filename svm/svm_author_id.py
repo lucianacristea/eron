@@ -28,6 +28,8 @@ clf.fit(features_train, labels_train)
 print ("Time to train:", round(time()-t0, 3), "s")
 
 t0 = time()
+print("Element 10:", clf.predict(features_test[9]))
+Print("Element 26:", clf.predict(features_test[25]))
 pred=clf.predict(features_test)
 print ("Time to make prediction:", round(time()-t0, 3), "s")
 
