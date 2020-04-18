@@ -25,15 +25,15 @@ t0 = time()
 ### features_train = features_train[:int(len(features_train)/100)]
 ### labels_train = labels_train[:int(len(labels_train)/100)]
 clf.fit(features_train, labels_train)
-print ("Time to train:", round(time()-t0, 3), "s")
+print("Time to train:", round(time()-t0, 3), "s")
 
 t0 = time()
 pred=clf.predict(features_test)
 print("Element 9:", pred[10])
 print("Element 10:", pred[10])
 print("Element 26:", pred[26])
-print("Element 50:", pred(features_test[50])
-print ("Time to make prediction:", round(time()-t0, 3), "s")
+print("Element 50:", pred[50])
+print("Time to make prediction:", round(time()-t0, 3), "s")
 
 ### calculate and return the accuracy on the test data
 from sklearn.metrics import accuracy_score
