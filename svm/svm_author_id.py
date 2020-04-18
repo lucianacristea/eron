@@ -28,9 +28,11 @@ clf.fit(features_train, labels_train)
 print ("Time to train:", round(time()-t0, 3), "s")
 
 t0 = time()
-print("Element 10:", clf.predict(features_test[9]))
-Print("Element 26:", clf.predict(features_test[25]))
 pred=clf.predict(features_test)
+print("Element 9:", pred[10])
+print("Element 10:", pred[10])
+Print("Element 26:", pred[26])
+Print("Element 50:", pred(features_test[50])
 print ("Time to make prediction:", round(time()-t0, 3), "s")
 
 ### calculate and return the accuracy on the test data
