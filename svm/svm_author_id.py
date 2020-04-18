@@ -11,6 +11,7 @@ import sys
 from time import time
 sys.path.append("../tools/")
 from email_preprocess import preprocess
+from class_vis import prettyPicture, output_image
 
 
 ### features_train and features_test are the features for the training
