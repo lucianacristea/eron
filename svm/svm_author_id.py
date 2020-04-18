@@ -35,8 +35,8 @@ pred=clf.predict(features_test)
 ### print("Element 50:", pred[50])
 sara=0
 chris=0
-for pr in predictions:
-    if p==0:
+for pr in pred:
+    if pr==0:
         sara+=1
     else:
         chris+=1
