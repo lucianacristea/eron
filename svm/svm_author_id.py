@@ -20,10 +20,11 @@ from class_vis import prettyPicture, output_image
 
 from sklearn.svm import SVC
 features_train, features_test, labels_train, labels_test = preprocess()
+### clf = SVC(kernel='linear')
 clf = SVC(kernel='rbf', C=10000.0)
 t0 = time()
-features_train = features_train[:int(len(features_train)/100)]
-labels_train = labels_train[:int(len(labels_train)/100)]
+### features_train = features_train[:int(len(features_train)/100)]
+### labels_train = labels_train[:int(len(labels_train)/100)]
 clf.fit(features_train, labels_train)
 print ("Time to train:", round(time()-t0, 3), "s")
 
