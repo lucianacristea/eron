@@ -29,10 +29,19 @@ print("Time to train:", round(time()-t0, 3), "s")
 
 t0 = time()
 pred=clf.predict(features_test)
-print("Element 9:", pred[10])
-print("Element 10:", pred[10])
-print("Element 26:", pred[26])
-print("Element 50:", pred[50])
+### print("Element 9:", pred[10])
+### print("Element 10:", pred[10])
+### print("Element 26:", pred[26])
+### print("Element 50:", pred[50])
+sara=0
+chris=0
+for pr in predictions:
+    if p==0:
+        sara+=1
+    else
+        chris+=1
+print("Sara: ", sara)
+print("Chris: ", chris)
 print("Time to make prediction:", round(time()-t0, 3), "s")
 
 ### calculate and return the accuracy on the test data
