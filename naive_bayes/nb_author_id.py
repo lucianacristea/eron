@@ -1,4 +1,4 @@
-#!/usr/bin/python
+
 
 """ 
     This is the code to accompany the Naive Bayes mini-project. 
