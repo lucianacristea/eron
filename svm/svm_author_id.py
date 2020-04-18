@@ -38,7 +38,7 @@ chris=0
 for pr in predictions:
     if p==0:
         sara+=1
-    else
+    else:
         chris+=1
 print("Sara: ", sara)
 print("Chris: ", chris)
