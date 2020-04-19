@@ -52,6 +52,7 @@ def preprocess(words_file = "../tools/word_data.pkl", authors_file="../tools/ema
     features_train_transformed = selector.transform(features_train_transformed).toarray()
     features_test_transformed  = selector.transform(features_test_transformed).toarray()
 
+    print(features_train_transformed)
     ### info on the data
     print ("no. of Chris training emails:", sum(labels_train))
     print ("no. of Sara training emails:", len(labels_train)-sum(labels_train))
