@@ -51,7 +51,7 @@ def prettyPicture(clf, X_test, y_test):
     plt.xlabel("Feature 2")
     plt.ylabel("Feature 1")
     ###plt.savefig("test.png")
-    return plt
+    return plt.savefig("test.png")
     
 import base64
 import json
