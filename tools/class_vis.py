@@ -54,7 +54,7 @@ def prettyPicture(clf, X_test, y_test):
 
 import base64
 ###import json
-import json as simplejson
+import simplejson as json
 import subprocess
     
 def output_image(name, format, bytes):
