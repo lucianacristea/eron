@@ -51,7 +51,11 @@ print("Accuracy of SVM predictor is: {}".format(accuracy))
 ##################################################################
 
 ### draw the decision boundary with the text points overlaid
-prettyPicture(clf, features_test, labels_test)
+### we only take the first two features.
+new_features_train=features_train[:, :2]
+new_features_test=features_test[:, :2]
+new_clf=fit(new_features_train, labels_train)
+prettyPicture(new_clf, new_features_test, labels_test)
 output_image("test.png", "png", open("test.png", "rb").read())
 
 #########################################################
