@@ -22,8 +22,8 @@ from sklearn.svm import SVC
 features_train, features_test, labels_train, labels_test = preprocess()
 clf = SVC(kernel='rbf', C=10000.0)
 t0 = time()
-### features_train = features_train[:int(len(features_train)/100)]
-### labels_train = labels_train[:int(len(labels_train)/100)]
+features_train = features_train[:int(len(features_train)/100)]
+labels_train = labels_train[:int(len(labels_train)/100)]
 clf.fit(features_train, labels_train)
 print("Time to train:", round(time()-t0, 3), "s")
 
@@ -54,7 +54,8 @@ print("Accuracy of SVM predictor is: {}".format(accuracy))
 ### we only take the first two features.
 new_features_train=features_train[:, :2]
 new_features_test=features_test[:, :2]
-new_clf=fit(new_features_train, labels_train)
+new_clf= SVC(kernel='rbf', C=10000.0)
+new_clf.fit(new_features_train, labels_train)
 prettyPicture(new_clf, new_features_test, labels_test)
 output_image("test.png", "png", open("test.png", "rb").read())
 
