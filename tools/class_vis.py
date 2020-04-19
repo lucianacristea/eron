@@ -53,8 +53,8 @@ def prettyPicture(clf, X_test, y_test):
     plt.savefig("test.png")
 
 import base64
-###import json
-import simplejson as json
+import json
+###import simplejson as json
 import subprocess
     
 def output_image(name, format, bytes):
@@ -64,4 +64,5 @@ def output_image(name, format, bytes):
     data['name'] = name
     data['format'] = format
     data['bytes'] = base64.encodestring(bytes)
-    print(image_start+json.dumps(data)+image_end)
+    ###print(image_start+json.dumps(data)+image_end)
+    print(image_start+json.dumps(list(data))+image_end)
