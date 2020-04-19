@@ -11,7 +11,8 @@ import sys
 from time import time
 sys.path.append("../tools/")
 from email_preprocess import preprocess
-from class_vis import prettyPicture, output_image
+### from class_vis import prettyPicture, output_image
+from class_vis import prettyPicture
 
 
 ### features_train and features_test are the features for the training
@@ -57,6 +58,6 @@ new_features_test=features_test[:, :2]
 new_clf= SVC(kernel='rbf', C=10000.0)
 new_clf.fit(new_features_train, labels_train)
 prettyPicture(new_clf, new_features_test, labels_test)
-output_image("test.png", "png", open("test.png", "rb").read())
+### output_image("test.png", "png", open("test.png", "rb").read())
 
 #########################################################
