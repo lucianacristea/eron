@@ -15,10 +15,11 @@ import numpy as np
 #plt.ioff()
 
 def prettyPicture(clf, X_test, y_test):
+    # we only take the first two features.
+    X_test=X_test[:,:2]
+ 
     #x_min = 0.0; x_max = 1.0
     #y_min = 0.0; y_max = 1.0
-    
- 
     x_min, x_max = X_test[:, 0].min() - 1, X_test[:, 0].max() + 1
     y_min, y_max = X_test[:, 1].min() - 1, X_test[:, 1].max() + 1
     
