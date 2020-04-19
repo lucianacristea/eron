@@ -50,8 +50,13 @@ def prettyPicture(clf, X_test, y_test):
     plt.legend()
     plt.xlabel("Feature 2")
     plt.ylabel("Feature 1")
-    plt.show()
-
-    ### plt.savefig("test.png")
+    plt.savefig("test.png")
     
-
+def output_image(name, format, bytes):
+    image_start = "BEGIN_IMAGE_f9825uweof8jw9fj4r8"
+    image_end = "END_IMAGE_0238jfw08fjsiufhw8frs"
+    data = {}
+    data['name'] = name
+    data['format'] = format
+    data['bytes'] = base64.encodestring(bytes)
+    print(image_start+json.dumps(data)+image_end)
