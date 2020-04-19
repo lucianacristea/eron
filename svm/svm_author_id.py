@@ -55,7 +55,9 @@ new_features_train=features_train[:, :2]
 new_features_test=features_test[:, :2]
 new_clf= SVC(kernel='rbf', C=10000.0)
 new_clf.fit(new_features_train, labels_train)
-prettyPicture(new_clf, new_features_test, labels_test)
-output_image("test.png", "png", open("test.png", "rb").read())
+import matplotlib.pyplot as plt
+plt=prettyPicture(new_clf, new_features_test, labels_test)
+plt.show()
+###output_image("test.png", "png", open("test.png", "rb").read())
 
 #########################################################
