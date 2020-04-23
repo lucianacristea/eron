@@ -18,7 +18,7 @@ from class_vis import prettyPicture, output_image
 ### labels_train and labels_test are the corresponding item labels
 features_train, features_test, labels_train, labels_test = preprocess()
 
-print("No. of features in the train data is:{}".format(len(features_train[0]))
+print("No. of features in the train data is:{}".format(len(features_train[0])))
 
 from sklearn.tree import DecisionTreeClassifier
 
