@@ -32,7 +32,7 @@ print ("Time to make prediction:", round(time()-t0, 3), "s")
 
 ### calculate and return the accuracy on the test data
 from sklearn.metrics import accuracy_score
-accuracy = accuracy_score(pred, labels_test)
+accuracy = accuracy_score(labels_test, pred)
 print("Accuracy of Naive Bayes predictor is: {}".format(accuracy))
 ##################################################################
 
