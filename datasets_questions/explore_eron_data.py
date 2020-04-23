@@ -13,4 +13,4 @@
 import pickle
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "rb"))
-print("People (data points) in dataset: {}".format(len(eron_data)))
+print("People (data points) in dataset: {}".format(len(enron_data)))
