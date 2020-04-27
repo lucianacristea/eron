@@ -22,7 +22,7 @@ k=0
 for key, value in enron_data.items():
     if value["poi"]==1:
         k+=1
-     if key=="PRENTICE JAMES":
+    if key=="PRENTICE JAMES":
         print("Total value of the stock belonging to {} is {}".format(key, value["restricted_stock"]))
  
 print("In the data set there are {} POI (persons of interest).".format(k))
