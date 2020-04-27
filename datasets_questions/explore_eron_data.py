@@ -16,12 +16,10 @@ enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "rb"
 print("People (data points) in dataset: {}".format(len(enron_data)))
 for key, value in enron_data.items():
     print("No. of attributes for one person (data point) in dataset: {}".format(len(list(filter(bool, value)))))
-    print(key, value)
     break
 k=0   
 for key, value in enron_data.items():
-    print(key, value["poi"])
     if value["poi"]==1:
-        k=+1
+        k+=1
  
 print("In the data set there are {} POI (persons of interest).".format(k))
