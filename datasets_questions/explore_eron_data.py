@@ -20,7 +20,8 @@ for key, value in enron_data.items():
     break
 k=0   
 for key, value in enron_data.items():
-    if key[value]["poi"]==1:
+    print(key, value["poi"])
+    if value["poi"]==1:
         k=+1
  
 print("In the data set there are {} POI (persons of interest).".format(k))
