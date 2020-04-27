@@ -24,6 +24,8 @@ for key, value in enron_data.items():
         k+=1
     if key=="PRENTICE JAMES":
         print("Total value of the stock belonging to {} is {}".format(key, value["total_stock_value"]))
+    if key=="COLWELL WESLEY":
+        print("Number of email messages from {} to POI is {}".format(key, value["from_this_person_to_poi"]))
  
 print("In the data set there are {} POI (persons of interest).".format(k))
 
