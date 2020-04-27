@@ -23,3 +23,11 @@ for key, value in enron_data.items():
         k+=1
  
 print("In the data set there are {} POI (persons of interest).".format(k))
+
+k=0
+enron_poi = pickle.load(open("../final_project/poi_names.txt", "rb"))
+for ln in enron_poi:
+  if "(y) " in ln:
+    k+=1
+ 
+print("In the txt data set there are {} POI (persons of interest).".format(k))
