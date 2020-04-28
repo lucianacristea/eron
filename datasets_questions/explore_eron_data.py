@@ -18,9 +18,12 @@ for key, value in enron_data.items():
     print("No. of attributes for one person (data point) in dataset: {}".format(len(list(filter(bool, value)))))
     print(key, value)
     break
+    
 k=0
 tp=0
 poitp=""
+ns=0
+ne=0
 for key, value in enron_data.items():
     if value["poi"]==1:
         k+=1
@@ -41,6 +44,11 @@ for key, value in enron_data.items():
         if tp<value["total_payments"]:
             tp=value["total_payments"]
             poitp=key
+    if value["salary"]<>"NaN":
+        ns+=1
+    if value["email_address"]<>"NaN":
+        ne+=1
+        
  
 print("In the data set there are {} POI (persons of interest).".format(k))
 print("Most money has been taken by {} and the value was {}".format(poitp, tp))
