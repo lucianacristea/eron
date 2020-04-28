@@ -33,11 +33,11 @@ for key, value in enron_data.items():
         if tp<value["total_payments"]:
             tp=value["total_payments"]
             poitp=key
-    if key=="FASTOW ANDREW":
+    if key=="FASTOW ANDREW S":
         if tp<value["total_payments"]:
             tp=value["total_payments"]
             poitp=key
-    if key=="LAY KENNETH":
+    if key=="LAY KENNETH L":
         if tp<value["total_payments"]:
             tp=value["total_payments"]
             poitp=key
