@@ -52,6 +52,8 @@ for key, value in enron_data.items():
  
 print("In the data set there are {} POI (persons of interest).".format(k))
 print("Most money has been taken by {} and the value was {}".format(poitp, tp))
+print("{} in data set have a quantified salary".format(ns))
+print("{} in data set have a known email".format(ne))
 
 k=0
 ### enron_poi = pickle.load(open("../final_project/poi_names.txt", "rb"))
