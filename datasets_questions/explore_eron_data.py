@@ -25,7 +25,7 @@ poitp=""
 ns=0
 ne=0
 ntp=0
-poitp=0
+pointp=0
 for key, value in enron_data.items():
     if value["poi"]==1:
         k+=1
@@ -53,7 +53,7 @@ for key, value in enron_data.items():
     if value["total_payments"]=="NaN":
         ntp+=1
         if value["poi"]==1:
-            poitp+=1
+            pointp+=1
         
  
 print("In the data set there are {} POI (persons of interest).".format(k))
@@ -61,7 +61,7 @@ print("Most money has been taken by {} and the value was {}".format(poitp, tp))
 print("{} in data set have a quantified salary".format(ns))
 print("{} in data set have a known email".format(ne))
 print("{} in data set have NaN for their total payments".format(ntp))
-print("{} POI in data set have NaN for their total payments".format(poitp))
+print("{} POI in data set have NaN for their total payments".format(pointp))
 
 k=0
 ### enron_poi = pickle.load(open("../final_project/poi_names.txt", "rb"))
