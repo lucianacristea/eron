@@ -61,6 +61,7 @@ print("Most money has been taken by {} and the value was {}".format(poitp, tp))
 print("{} in data set have a quantified salary".format(ns))
 print("{} in data set have a known email".format(ne))
 print("{} in data set have NaN for their total payments".format(ntp))
+print("{}% in data set have NaN for their total payments".format(ntp*100/len(enron_data)))
 print("{} POI in data set have NaN for their total payments".format(pointp))
 
 k=0
