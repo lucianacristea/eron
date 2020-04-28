@@ -44,9 +44,9 @@ for key, value in enron_data.items():
         if tp<value["total_payments"]:
             tp=value["total_payments"]
             poitp=key
-    if value["salary"]<>"NaN":
+    if value["salary"]!="NaN":
         ns+=1
-    if value["email_address"]<>"NaN":
+    if value["email_address"]!="NaN":
         ne+=1
         
  
