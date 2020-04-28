@@ -18,7 +18,9 @@ for key, value in enron_data.items():
     print("No. of attributes for one person (data point) in dataset: {}".format(len(list(filter(bool, value)))))
     print(key, value)
     break
-k=0   
+k=0
+tp=0
+poitp=""
 for key, value in enron_data.items():
     if value["poi"]==1:
         k+=1
@@ -28,9 +30,20 @@ for key, value in enron_data.items():
         print("Number of email messages from {} to POI is {}".format(key, value["from_this_person_to_poi"]))
     if key=="SKILLING JEFFREY K":
         print("Value of stock options exercised by {} is {}".format(key, value["exercised_stock_options"]))
- 
+        if tp<value["total_payments"]:
+            tp=value["total_payments"]
+            poitp=key
+    if key=="FASTOW ANDREW":
+        if tp<value["total_payments"]:
+            tp=value["total_payments"]
+            poitp=key
+    if key=="LAY KENNETH":
+        if tp<value["total_payments"]:
+            tp=value["total_payments"]
+            poitp=key
  
 print("In the data set there are {} POI (persons of interest).".format(k))
+print("Most money has been taken by {} and the value was {}".format(poitp, tp))
 
 k=0
 ### enron_poi = pickle.load(open("../final_project/poi_names.txt", "rb"))
