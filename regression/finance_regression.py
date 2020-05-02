@@ -35,12 +35,9 @@ test_color = "r"
 ### plots it correctly. Don't forget to change the test_color above from "b" to
 ### "r" to differentiate training points from test points.
 
-
-
-
-
-
-
+from sklearn import linear_model
+clf=linear_model.LinearRegression()
+reg= clf.fit(feature_train, target_train)
 
 ### draw the scatterplot, with color-coded training and testing points
 import matplotlib.pyplot as plt
