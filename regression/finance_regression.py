@@ -39,8 +39,8 @@ clf=linear_model.LinearRegression()
 reg= clf.fit(feature_train, target_train)
 print("Slope: {}".format(reg.coef_))
 print("Intercept: {}".format(reg.intercept_))
-print("Score: {}".format(reg.score(feature_train, target_train)))
-
+print("Score training: {}".format(reg.score(feature_train, target_train)))
+print("Score test: {}".format(reg.score(feature_test, target_test)))
 
 ### draw the scatterplot, with color-coded training and testing points
 import matplotlib.pyplot as plt
