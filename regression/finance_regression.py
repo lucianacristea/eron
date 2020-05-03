@@ -62,4 +62,3 @@ print("Score: {}".format(reg.score(feature_train, target_train))
 #plt.ylabel(features_list[0])
 #plt.legend()
 #plt.show()
-  
