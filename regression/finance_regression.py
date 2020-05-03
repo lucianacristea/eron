@@ -42,6 +42,22 @@ print("Intercept: {}".format(reg.intercept_))
 print("Score training: {}".format(reg.score(feature_train, target_train)))
 print("Score test: {}".format(reg.score(feature_test, target_test)))
 
+
+### Perform the regression of bonus against long term incentive
+### list the features you want to look at--first item in the 
+### list will be the "target" feature
+features_list = ["bonus", "long_term_incentive"]
+data = featureFormat( dictionary, features_list, remove_any_zeroes=True, sort_keys = '../tools/python2_lesson06_keys.pkl' )
+target, features = targetFeatureSplit(data)
+
+### training-testing split needed in regression, just like classification
+feature_train, feature_test, target_train, target_test = train_test_split(features, target, test_size=0.5, random_state=42)
+
+reg= clf.fit(feature_train, target_train)
+print("Score test incentive: {}".format(reg.score(feature_test, target_test)))
+
+
+
 ### draw the scatterplot, with color-coded training and testing points
 import matplotlib.pyplot as plt
 for feature, target in zip(feature_test, target_test):
