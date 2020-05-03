@@ -43,7 +43,7 @@ print("Score training: {}".format(reg.score(feature_train, target_train)))
 print("Score test: {}".format(reg.score(feature_test, target_test)))
 
 reg.fit(feature_test, target_test)
-print("Slope: {}".format(reg.coef_))
+print("Slope on test: {}".format(reg.coef_))
 
 ### Perform the regression of bonus against long term incentive
 ### list the features you want to look at--first item in the 
