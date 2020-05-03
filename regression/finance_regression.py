@@ -41,9 +41,8 @@ print("Slope: {}".format(reg.coef_))
 print("Intercept: {}".format(reg.intercept_))
 print("Score: {}".format(reg.score(feature_train, target_train))
 
-"""
 ### draw the scatterplot, with color-coded training and testing points
-import matplotlib.pyplot as plt
+'''import matplotlib.pyplot as plt
 for feature, target in zip(feature_test, target_test):
     plt.scatter( feature, target, color=test_color ) 
 for feature, target in zip(feature_train, target_train):
@@ -62,5 +61,5 @@ except NameError:
 plt.xlabel(features_list[1])
 plt.ylabel(features_list[0])
 plt.legend()
-plt.show()
-"""    
+plt.show()'''
+  
