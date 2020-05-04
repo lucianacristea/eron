@@ -26,6 +26,7 @@ ages_train, ages_test, net_worths_train, net_worths_test = train_test_split(ages
 from sklearn import linear_model
 clf=linear_model.LinearRegression()
 reg= clf.fit(ages_train, net_worths_train)
+print("Slope: {}".format(reg.coef_))
 
 try:
     plt.plot(ages, reg.predict(ages), color="blue")
