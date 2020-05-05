@@ -11,7 +11,8 @@ def outlierCleaner(predictions, ages, net_worths):
     errors= abs(predictions - net_worths)
     cleaned_data=zip(ages, net_worths, errors)
     cleaned_data= sorted(cleaned_data, key=lambda x:x[2][0], reverse=True)
+    print(cleaned_data)
     limit=int(len(net_worth)*0.1)
-        
+    print(limit)    
     
     return cleaned_data[limit:]
