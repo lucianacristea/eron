@@ -35,7 +35,7 @@ except NameError:
 plt.scatter(ages, net_worths)
 plt.show()
 
-"""
+
 ### identify and remove the most outlier-y points
 cleaned_data = []
 try:
@@ -44,8 +44,6 @@ try:
 except NameError:
     print("your regression object doesn't exist, or isn't name reg")
     print("can't make predictions to use in identifying outliers")
-
-
 
 
 ### only run this code if cleaned_data is returning data
@@ -58,6 +56,7 @@ if len(cleaned_data) > 0:
     try:
         reg.fit(ages, net_worths)
         plt.plot(ages, reg.predict(ages), color="blue")
+        print("Slope of cleaned data: {}".format(reg.coef_))
     except NameError:
         print("you don't seem to have regression imported/created,")
         print ("   or else your regression object isn't named reg")
