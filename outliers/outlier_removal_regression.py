@@ -69,4 +69,3 @@ if len(cleaned_data) > 0:
 
 else:
     print ("outlierCleaner() is returning an empty list, no refitting to be done")
-"""
