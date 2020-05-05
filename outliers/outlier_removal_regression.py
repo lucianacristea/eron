@@ -25,7 +25,7 @@ from sklearn import linear_model
 clf=linear_model.LinearRegression()
 reg= clf.fit(ages_train, net_worths_train)
 print("Slope: {}".format(reg.coef_))
-rint("Score test: {}".format(reg.score(ages_test, net_worths_test)))
+print("Score test: {}".format(reg.score(ages_test, net_worths_test)))
 
 
 try:
