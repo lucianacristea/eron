@@ -57,6 +57,7 @@ if len(cleaned_data) > 0:
         reg.fit(ages, net_worths)
         plt.plot(ages, reg.predict(ages), color="blue")
         print("Slope of cleaned data: {}".format(reg.coef_))
+        print("Score of cleaned data: {}".format(reg.score(ages, net_worths)))
     except NameError:
         print("you don't seem to have regression imported/created,")
         print ("   or else your regression object isn't named reg")
