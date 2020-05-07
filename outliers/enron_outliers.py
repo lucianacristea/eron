@@ -17,8 +17,8 @@ for point in data:
     bonus = point[1]
     matplotlib.pyplot.scatter( salary, bonus )
 
-matplotlib.pyplot.xlim(0, max(salary))
-matplotlib.pyplot.ylim(0, max(bonus))
+matplotlib.pyplot.xlim(0, salary.max())
+matplotlib.pyplot.ylim(0, bonus.max())
     
 matplotlib.pyplot.xlabel("salary")
 matplotlib.pyplot.ylabel("bonus")
