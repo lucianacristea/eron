@@ -12,16 +12,22 @@ data = featureFormat(data_dict, features)
 
 
 ### your code below
+max_salary=0
+max_bonus=0
 for point in data:
     salary = point[0]
     bonus = point[1]
+    if salary>max_salary:
+        max_salary=salary
+    if bonus>max_bonus:
+        max_bonus=bonus
     matplotlib.pyplot.scatter( salary, bonus )
     
-print(salary)
-print("max bonus: {}".format(bonus.max()))
+print("max salary: {}".format(max_salary))
+print("max bonus: {}".format(max_bonus))
     
-matplotlib.pyplot.xlim(0, salary.max()+50000)
-matplotlib.pyplot.ylim(0, bonus.max()+25000)
+matplotlib.pyplot.xlim(0, max_salary+50000)
+matplotlib.pyplot.ylim(0, max_bonus+25000)
     
 matplotlib.pyplot.xlabel("salary")
 matplotlib.pyplot.ylabel("bonus")
