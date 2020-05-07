@@ -26,8 +26,8 @@ for point in data:
 print("max salary: {}".format(max_salary))
 print("max bonus: {}".format(max_bonus))
     
-matplotlib.pyplot.xlim(0, max_salary+50000)
-matplotlib.pyplot.ylim(0, max_bonus+25000)
+matplotlib.pyplot.xlim(0, max_salary+5000)
+matplotlib.pyplot.ylim(0, max_bonus+2500)
     
 matplotlib.pyplot.xlabel("salary")
 matplotlib.pyplot.ylabel("bonus")
