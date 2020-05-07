@@ -16,8 +16,8 @@ for point in data:
     salary = point[0]
     bonus = point[1]
     matplotlib.pyplot.scatter( salary, bonus )
-
-print("max salary: {}".format(salary.max()))
+    
+print(salary)
 print("max bonus: {}".format(bonus.max()))
     
 matplotlib.pyplot.xlim(0, salary.max()+50000)
