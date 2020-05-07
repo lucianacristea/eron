@@ -15,8 +15,8 @@ data = featureFormat(data_dict, features)
 max_salary=0
 max_bonus=0
 for point in data:
-    salary = point[0]
-    bonus = point[1]
+    salary = point[0]/1000
+    bonus = point[1]/1000
     if salary>max_salary:
         max_salary=salary
     if bonus>max_bonus:
