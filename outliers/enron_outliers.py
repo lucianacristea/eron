@@ -17,9 +17,9 @@ max_bonus=0
 for point in data:
     salary = point[0]/1000
     bonus = point[1]/1000
-    if salary>max_salary:
+    if salary>max_salary and salary!=26704.229:
         max_salary=salary
-    if bonus>max_bonus:
+    if bonus>max_bonus and bonus!= 97343.619:
         max_bonus=bonus
     matplotlib.pyplot.scatter( salary, bonus )
     
