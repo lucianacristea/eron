@@ -81,14 +81,14 @@ k=0
 for f1, f2, _ in finance_features:
     if f2>max_exercised_stock_options:
         max_exercised_stock_options=f2
-        i+=i
+        i+=1
     if min_exercised_stock_options==0:
         min_exercised_stock_options=f2
-        j+=j
+        j+=1
     else:
         if f2<min_exercised_stock_options:
             min_exercised_stock_options=f2
-            k+=k
+            k+=1
     print("step {} min exercised_stock_options: {}".format(i, min_exercised_stock_options))
     print("step {} max exercised_stock_options: {}".format(k, max_exercised_stock_options))
     plt.scatter( f1, f2 )
