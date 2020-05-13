@@ -75,12 +75,21 @@ poi, finance_features = targetFeatureSplit( data )
 ### (as it's currently written, the line below assumes 2 features)
 max_exercised_stock_options=0
 min_exercised_stock_options=0
-i=0
-j=0
-k=0
+max_salary=0
+min_salary=0
 for f1, f2, _ in finance_features:
+    if f1>max_salary:
+        max_salary=f2
+        
     if f2>max_exercised_stock_options:
         max_exercised_stock_options=f2
+    
+    if min_salary==0:
+        min_salary=f1
+    else:
+        if f1<min_salary and f1!=0:
+            min_salary=f1
+    
     if min_exercised_stock_options==0:
         min_exercised_stock_options=f2
     else:
@@ -88,6 +97,9 @@ for f1, f2, _ in finance_features:
             min_exercised_stock_options=f2
     plt.scatter( f1, f2 )
 plt.show()
+
+print("min salary: {}".format(min_salary))
+print("max salary: {}".format(max_salary))
 
 print("min exercised_stock_options: {}".format(min_exercised_stock_options))
 print("max exercised_stock_options: {}".format(max_exercised_stock_options))
