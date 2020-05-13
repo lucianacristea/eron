@@ -81,7 +81,7 @@ for f1, f2, _ in finance_features:
     if min_exercised_stock_options==0:
         min_exercised_stock_options=f2
     else:
-        if min_exercised_stock_options>f2:
+        if f2<min_exercised_stock_options:
             min_exercised_stock_options=f2
     plt.scatter( f1, f2 )
 plt.show()
