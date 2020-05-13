@@ -51,7 +51,7 @@ poi  = "poi"
 
 from sklearn.cluster import KMeans
 
-"""
+
 ###cluster with 2 features
 features_list2 = [poi, feature_1, feature_2]
 data2 = featureFormat(data_dict, features_list2 )
@@ -69,8 +69,8 @@ plt.show()
 
 kmeans2 = KMeans(n_clusters=2).fit(finance_features2)
 pred2=kmeans2.predict(finance_features2)
-"""
 
+"""
 ###cluster with 3 features
 features_list = [poi, feature_1, feature_2, feature_3]
 data = featureFormat(data_dict, features_list )
@@ -115,13 +115,13 @@ print("max exercised_stock_options: {}".format(max_exercised_stock_options))
 ### for the data and store them to a list called pred
 kmeans = KMeans(n_clusters=3).fit(finance_features)
 pred=kmeans.predict(finance_features)
-
+"""
 
 ### rename the "name" parameter when you change the number of features
 ### so that the figure gets saved to a different file
 try:
-     ###Draw(pred2, finance_features2, poi, mark_poi=False, name="clusters.pdf", f1_name=feature_1, f2_name=feature_2)
-     Draw(pred, finance_features, poi, mark_poi=False, name="clusters3.pdf", f1_name=feature_1, f2_name=feature_2)
+     Draw(pred2, finance_features2, poi, mark_poi=False, name="clusters.pdf", f1_name=feature_1, f2_name=feature_2)
+     ###Draw(pred, finance_features, poi, mark_poi=False, name="clusters3.pdf", f1_name=feature_1, f2_name=feature_2)
 except NameError:
     print("no predictions object named pred found, no clusters to plot")
     
