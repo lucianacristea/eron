@@ -49,6 +49,9 @@ feature_2 = "exercised_stock_options"
 feature_3 = "total_payments"
 poi  = "poi"
 
+from sklearn.cluster import KMeans
+
+"""
 ###cluster with 2 features
 features_list2 = [poi, feature_1, feature_2]
 data2 = featureFormat(data_dict, features_list2 )
@@ -63,9 +66,10 @@ for f1, f2 in finance_features2:
     plt.scatter( f1, f2 )
 plt.show()
 
-from sklearn.cluster import KMeans
+
 kmeans2 = KMeans(n_clusters=2).fit(finance_features2)
 pred2=kmeans2.predict(finance_features2)
+"""
 
 ###cluster with 3 features
 features_list = [poi, feature_1, feature_2, feature_3]
@@ -116,7 +120,7 @@ pred=kmeans.predict(finance_features)
 ### rename the "name" parameter when you change the number of features
 ### so that the figure gets saved to a different file
 try:
-     Draw(pred2, finance_features2, poi, mark_poi=False, name="clusters.pdf", f1_name=feature_1, f2_name=feature_2)
+     ###Draw(pred2, finance_features2, poi, mark_poi=False, name="clusters.pdf", f1_name=feature_1, f2_name=feature_2)
      Draw(pred, finance_features, poi, mark_poi=False, name="clusters3.pdf", f1_name=feature_1, f2_name=feature_2)
 except NameError:
     print("no predictions object named pred found, no clusters to plot")
