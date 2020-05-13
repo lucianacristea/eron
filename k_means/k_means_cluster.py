@@ -79,7 +79,7 @@ max_salary=0
 min_salary=0
 for f1, f2, _ in finance_features:
     if f1>max_salary:
-        max_salary=f2
+        max_salary=f1
         
     if f2>max_exercised_stock_options:
         max_exercised_stock_options=f2
