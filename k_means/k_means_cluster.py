@@ -83,6 +83,8 @@ for f1, f2, _ in finance_features:
     else:
         if f2<min_exercised_stock_options:
             min_exercised_stock_options=f2
+    print("min exercised_stock_options: {}".format(min_exercised_stock_options))
+    print("max exercised_stock_options: {}".format(max_exercised_stock_options))
     plt.scatter( f1, f2 )
 plt.show()
 
