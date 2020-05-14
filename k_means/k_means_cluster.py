@@ -64,8 +64,10 @@ pred2=kmeans2.predict(finance_features2)
 
 from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler()
-print("Rescaled salary with value of $200 000: {}".format(scaler.fit(finance_features2[0]).transform([200000.])))
-print("Rescaled exercised stock options with value of $1000 000: {}".format(scaler.fit(finance_features2[1]).transform([1000000.])))
+###print("Rescaled salary with value of $200 000: {}".format(scaler.fit(finance_features2[0]).transform([200000.])))
+###print("Rescaled exercised stock options with value of $1000 000: {}".format(scaler.fit(finance_features2[1]).transform([1000000.])))
+
+print(scaler.fit(finance_features2).transform([[200000.,1000000.]]))
 
 """
 ###cluster with 3 features
