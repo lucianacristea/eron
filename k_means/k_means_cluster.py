@@ -2,9 +2,6 @@
     Skeleton code for k-means clustering mini-project.
 """
 
-
-
-
 import pickle
 import numpy
 import matplotlib.pyplot as plt
@@ -30,8 +27,6 @@ def Draw(pred, features, poi, mark_poi=False, name="image.png", f1_name="feature
     plt.ylabel(f2_name)
     plt.savefig(name)
     plt.show()
-
-
 
 ### load in the dict of dicts containing all the data on each person in the dataset
 data_dict = pickle.load( open("../final_project/final_project_dataset.pkl", "rb") )
@@ -69,8 +64,9 @@ pred2=kmeans2.predict(finance_features2)
 
 from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler()
-print(scaler.fit(finance_features2))
-print(scaler.transform(finance_features2))
+scaler.fit(finance_features2)
+scaler.transform(finance_features2)
+print(scaler.data_max_)
 
 """
 ###cluster with 3 features
