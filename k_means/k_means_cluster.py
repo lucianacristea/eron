@@ -65,7 +65,7 @@ pred2=kmeans2.predict(finance_features2)
 from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler()
 scaler.fit(finance_features2)
-print(scaler.transform(200000., 1000000.)
+print(scaler.transform(200000., 1000000.))
 
 """
 ###cluster with 3 features
