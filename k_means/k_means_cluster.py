@@ -12,9 +12,6 @@ import sys
 sys.path.append("../tools/")
 from feature_format import featureFormat, targetFeatureSplit
 
-
-
-
 def Draw(pred, features, poi, mark_poi=False, name="image.png", f1_name="feature 1", f2_name="feature 2"):
     """ some plotting code designed to help you visualize your clusters """
 
@@ -69,6 +66,12 @@ plt.show()
 
 kmeans2 = KMeans(n_clusters=2).fit(finance_features2)
 pred2=kmeans2.predict(finance_features2)
+
+from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler()
+scaler.fit(finance_features2)
+print(scaler.fit(data))
+print(scaler.transform(finance_features2))
 
 """
 ###cluster with 3 features
