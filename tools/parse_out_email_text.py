@@ -23,7 +23,8 @@ def parseOutText(f):
     words = ""
     if len(content) > 1:
         ### remove punctuation
-        text_string = content[1].translate(string.maketrans("", ""), string.punctuation)
+        ###text_string = content[1].translate(string.maketrans("", ""), string.punctuation)
+        text_string = content[1].translate(str.maketrans("", ""))
 
         ### project part 2: comment out the line below
         words = text_string
