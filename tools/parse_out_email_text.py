@@ -33,10 +33,10 @@ def parseOutText(f):
         
         stem_sentence=[]
         for word in text_string:
-            stem_sentance.append(stemmer.stem(word))
-            stem_sentance.append(" ")
+            stem_sentence.append(stemmer.stem(word))
+            stem_sentence.append(" ")
         
-        words = " ".join(stem_sentance)
+        words = " ".join(stem_sentence)
         
         
         ### split the text string into individual words, stem each word,
