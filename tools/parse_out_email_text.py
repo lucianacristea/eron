@@ -31,7 +31,7 @@ def parseOutText(f):
         from nltk.stem.snowball import SnowballStemmer
         stemmer = SnowballStemmer("english")
         
-        stem_sentence=test_string.split()
+        stem_sentence=text_string.split()
         
         wordsL=[]
         for word in stem_sentence:
