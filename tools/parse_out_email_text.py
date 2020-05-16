@@ -41,8 +41,7 @@ def parseOutText(f):
         wordsL=[]
         for word in stem_sentence:
             wordsL.append(stemmer.stem(word))
-            wordsL.append(" ")
-        
+             
         words = " ".join(wordsL)
 
 
