@@ -43,7 +43,7 @@ def parseOutText(f):
 def main():
     ff = open("../text_learning/test_email.txt", "r")
     text = parseOutText(ff)
-    print text
+    print(text)
 
 
 
