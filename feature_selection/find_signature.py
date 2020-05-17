@@ -40,4 +40,4 @@ classifier=classifier.fit(features_train,labels_train)
 
 predictions=classifier.predict(features_test)
 
-print("Accuracy: {}*.format(sklearn.metrics.accuracy_score(tar_test, predictions)))
+print("Accuracy: {}".format(sklearn.metrics.accuracy_score(tar_test, predictions)))
