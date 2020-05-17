@@ -44,11 +44,13 @@ classifier=classifier.fit(features_train,labels_train)
 importance = classifier.feature_importances_
 # summarize feature importance
 k=0
+score=0
 for i,v in enumerate(importance):
-  print('Feature: %0d, Score: %.5f' % (i,v))
-  k+=1
-  if k>20:
-    exit
+  if v>score:
+    score=v
+    feature=i
+    k+=1
+print('Feature: %0d, Score: %.5f' % (feature,score))
 
 predictions=classifier.predict(features_test)
 
