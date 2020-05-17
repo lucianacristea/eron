@@ -50,7 +50,7 @@ for i,v in enumerate(importance):
     score=v
     feature=i
     k+=1
-print('Feature: %0d, Score: %.5f' % (feature,score))
+print('Feature: {}, Score: {}, Number: {}".format(feature,score,k))
 
 predictions=classifier.predict(features_test)
 
