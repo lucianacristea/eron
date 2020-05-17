@@ -49,6 +49,10 @@ feature_names = vectorizer.get_feature_names()
 for i,v in enumerate(importance):
   if v>0.2:
     print("Feature: {}, Score: {}, Number: {}".format(feature_names[i],v,i))
+    
+top_features = [(number, feature, vectorizer.get_feature_names()[number]) for number, feature in 
+                zip(range(len(clf.feature_importances_)), clf.feature_importances_) if feature > 0.2]
+print(top_features)
 
 predictions=classifier.predict(features_test)
 
