@@ -49,13 +49,8 @@ score=0
 feature_names = vectorizer.get_feature_names()
 
 for i,v in enumerate(importance):
-  if v>score:
-    score=v
-    feature=feature_names[i]
-    k+=1
   if v>0.2:
     print("Feature: {}, Score: {}, Number: {}".format(feature_names[i],v,i))
-print("Highest score: Feature: {}, Score: {}, Number: {}".format(feature,score,k))
 
 predictions=classifier.predict(features_test)
 
