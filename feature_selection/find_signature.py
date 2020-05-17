@@ -45,14 +45,17 @@ importance = classifier.feature_importances_
 # summarize feature importance
 k=0
 score=0
+
+feature_names = vectorizer.get_feature_names()
+
 for i,v in enumerate(importance):
   if v>score:
     score=v
-    feature=features_train[i]
+    feature=feature_names[i]
     k+=1
   if v>0.2:
-    print("Feature: {}, Score: {}, Number: {}".format(features_train[i],v,i))
-print("Feature: {}, Score: {}, Number: {}".format(feature,score,k))
+    print("Feature: {}, Score: {}, Number: {}".format(feature_names[i],v,i))
+print("Highest score: Feature: {}, Score: {}, Number: {}".format(feature,score,k))
 
 predictions=classifier.predict(features_test)
 
