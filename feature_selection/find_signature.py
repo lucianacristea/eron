@@ -40,6 +40,16 @@ from sklearn.metrics import accuracy_score
 classifier=DecisionTreeClassifier()
 classifier=classifier.fit(features_train,labels_train)
 
+# get importance
+importance = classifier.feature_importances_
+# summarize feature importance
+k=0
+for i,v in enumerate(importance):
+  print('Feature: %0d, Score: %.5f' % (i,v))
+  k+=1
+  if k>20:
+    exit
+
 predictions=classifier.predict(features_test)
 
 print("Accuracy: {}".format(accuracy_score(labels_test, predictions)))
