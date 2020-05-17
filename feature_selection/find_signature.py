@@ -42,4 +42,4 @@ classifier=classifier.fit(features_train,labels_train)
 
 predictions=classifier.predict(features_test)
 
-print("Accuracy: {}".format(accuracy_score(tar_test, predictions)))
+print("Accuracy: {}".format(accuracy_score(labels_test, predictions)))
