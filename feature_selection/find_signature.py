@@ -43,8 +43,6 @@ classifier=classifier.fit(features_train,labels_train)
 # get importance
 importance = classifier.feature_importances_
 # summarize feature importance
-k=0
-score=0
 
 feature_names = vectorizer.get_feature_names()
 
