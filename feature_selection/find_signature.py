@@ -51,8 +51,8 @@ for i,v in enumerate(importance):
     feature=feature_train[i]
     k+=1
   if v>0.2:
-    print('Feature: {}, Score: {}, Number: {}".format(feature_train[i],v,i))
-print('Feature: {}, Score: {}, Number: {}".format(feature,score,k))
+    print("Feature: {}, Score: {}, Number: {}".format(feature_train[i],v,i))
+print("Feature: {}, Score: {}, Number: {}".format(feature,score,k))
 
 predictions=classifier.predict(features_test)
 
