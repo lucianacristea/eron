@@ -8,9 +8,8 @@ numpy.random.seed(42)
 ### mini-project.
 words_file = "../text_learning/your_word_data.pkl" 
 authors_file = "../text_learning/your_email_authors.pkl"
-word_data = pickle.load( open(words_file, "r"))
-authors = pickle.load( open(authors_file, "r") )
-
+word_data = pickle.load( open(words_file, "rb"))
+authors = pickle.load( open(authors_file, "rb") )
 
 
 ### test_size is the percentage of events assigned to the test set (the
@@ -30,10 +29,15 @@ features_test  = vectorizer.transform(features_test).toarray()
 ### a classic way to overfit is to use a small number
 ### of data points and a large number of features;
 ### train on only 150 events to put ourselves in this regime
-features_train = features_train[:150].toarray()
+###features_train = features_train[:150].toarray()
+features_train = features_train[:150]
 labels_train   = labels_train[:150]
 
-
-
 ### your code goes here
+from sklearn.tree import DecisionTreeClassifier
+classifier=DecisionTreeClassifier()
+classifier=classifier.fit(features_train,labels_train)
 
+predictions=classifier.predict(features_test)
+
+print("Accuracy: {}*.format(sklearn.metrics.accuracy_score(tar_test, predictions)))
