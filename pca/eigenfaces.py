@@ -22,7 +22,7 @@ from sklearn.datasets import fetch_lfw_people
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
-from sklearn.decomposition import RandomizedPCA
+from sklearn.decomposition import PCA as RandomizedPCA
 from sklearn.svm import SVC
 
 # Display progress logs on stdout
