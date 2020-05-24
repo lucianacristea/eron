@@ -67,6 +67,7 @@ t0 = time()
 pca = RandomizedPCA(n_components=n_components, whiten=True).fit(X_train)
 print ("done in %0.3fs" % (time() - t0))
 print(pca.explained_variance_ratio_)
+print("Variance of the first and second PC:".format(pca.explained_variance_ratio_[:2]))
 
 eigenfaces = pca.components_.reshape((n_components, h, w))
 
@@ -75,8 +76,6 @@ t0 = time()
 X_train_pca = pca.transform(X_train)
 X_test_pca = pca.transform(X_test)
 print ("done in %0.3fs" % (time() - t0))
-
-print("Variance of the first and second PC:".format(pca.explained_variance_ratio_[:2]))
 ###############################################################################
 # Train a SVM classification model
 
