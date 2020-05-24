@@ -99,7 +99,7 @@ print (clf.best_estimator_)
 print ("Predicting the people names on the testing set")
 t0 = time()
 y_pred = clf.predict(X_test_pca)
-print "done in %0.3fs" % (time() - t0)
+print ("done in %0.3fs" % (time() - t0))
 
 print (classification_report(y_test, y_pred, target_names=target_names))
 print (confusion_matrix(y_test, y_pred, labels=range(n_classes)))
