@@ -21,6 +21,19 @@ sort_keys = '../tools/python2_lesson13_keys.pkl'
 data = featureFormat(data_dict, features_list, sort_keys)
 labels, features = targetFeatureSplit(data)
 
+### it's all yours from here forward! 
+from sklearn.model_selection import train_test_split
+features_train, features_test, labels_train, labels_test = train_test_split(features, labels, test_size = 0.25, random_state = 42)
 
+from sklearn.tree import DecisionTreeClassifier
+clf = DecisionTreeClassifier()
+clf = tree.DecisionTreeClassifier()
+###clf = clf.fit(features_train, labels_train)
+clf = clf.fit(features, labels)
+pred=clf.predict(features_test)
 
-### it's all yours from here forward!  
+### calculate and return the accuracy on the test data
+from sklearn.metrics import accuracy_score
+accuracy = accuracy_score(labels_test, pred)
+print("Accuracy of Decision Tree predictor is: {}".format(accuracy))
+##################################################################
