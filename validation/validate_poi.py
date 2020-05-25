@@ -27,7 +27,7 @@ features_train, features_test, labels_train, labels_test = train_test_split(feat
 
 from sklearn.tree import DecisionTreeClassifier
 clf = DecisionTreeClassifier()
-clf = tree.DecisionTreeClassifier()
+
 ###clf = clf.fit(features_train, labels_train)
 clf = clf.fit(features, labels)
 pred=clf.predict(features_test)
