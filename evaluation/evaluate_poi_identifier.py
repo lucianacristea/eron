@@ -34,6 +34,7 @@ pred=clf.predict(features_test)
 ###pred=clf.predict(features)
 import numpy as np
 print ("Number of POI's: ", np.count_nonzero(pred))
+print ("People in Test Set: ", len(pred)) 
 
 ### calculate and return the accuracy on the test data
 from sklearn.metrics import accuracy_score
