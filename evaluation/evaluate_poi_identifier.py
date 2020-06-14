@@ -33,14 +33,14 @@ clf = clf.fit(features_train, labels_train)
 pred=clf.predict(features_test)
 ###pred=clf.predict(features)
 import numpy as np
-from sklearn.metrics import confusion_matrix, precision_score, recall_score, classification_report
+from sklearn.metrics import confusion_matrix, precision_score, recall_score, classification_report, accuracy_score
 print ("Number of POI's: ", np.count_nonzero(pred))
 print ("People in Test Set: ", len(pred)) 
 print (confusion_matrix(labels_test, pred))
+print ("Precision is {}". format(precision_score(labels_test, pred)))
+print ("Recall is {}". format(recall_score(labels_test, pred)))
+print (classification_report(labels_test, pred))
 
-### calculate and return the accuracy on the test data
-from sklearn.metrics import accuracy_score
 accuracy = accuracy_score(labels_test, pred)
-###accuracy = accuracy_score(labels, pred)
 print("Accuracy of Decision Tree predictor is: {}".format(accuracy))
 ##################################################################
