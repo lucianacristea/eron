@@ -32,6 +32,8 @@ clf = clf.fit(features_train, labels_train)
 ###clf = clf.fit(features, labels)
 pred=clf.predict(features_test)
 ###pred=clf.predict(features)
+import numpy as np
+print ("Number of POI's: ", np.count_nonzero(pred))
 
 ### calculate and return the accuracy on the test data
 from sklearn.metrics import accuracy_score
