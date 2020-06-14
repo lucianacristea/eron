@@ -36,7 +36,7 @@ import numpy as np
 from sklearn.metrics import confusion_matrix, precision_score, recall_score, classification_report
 print ("Number of POI's: ", np.count_nonzero(pred))
 print ("People in Test Set: ", len(pred)) 
-print confusion_matrix(labels_test, pred)
+print (confusion_matrix(labels_test, pred))
 
 ### calculate and return the accuracy on the test data
 from sklearn.metrics import accuracy_score
